@@ -1,0 +1,65 @@
+\documentclass[english, hebrew ,12pt, a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\makeatletter\let\l@hebrew\l@nohyphenation\makeatother
+\usepackage{babel}
+
+\usepackage{graphicx}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+
+
+\usepackage{amsfonts,amsmath}
+\graphicspath{ {Images/} }
+
+\title{מבוא לבינה מלאכותית: מבחן בית - הפורמט הקצר}
+\author{יוסי לוי ת.ז. 820795730}
+\date {0202.80.31}
+
+\begin{document}
+\maketitle
+\selectlanguage{hebrew}
+
+\section{}
+כל ערכי הפיצ'רים הם ערכים מנורמלים. בכל חלקי השאלה
+\begin{enumerate}
+    \item בחלק זה נתבקשנו להריץ את הנתונים על שני מודלים ולחזות את איכות היין. המודל הראשון שנבחר הוא רגרסיה ליניארית והשני הוא
+    \selectlanguage{english}
+    Random Forest.
+    \centering
+    \includegraphics[width=0.5\paperwidth]{linear_regres}
+    \includegraphics[width=0.5\paperwidth]{random_forest}
+    \newline
+    \selectlanguage{hebrew}
+    הגרפים מציגים את היכולת לחזות את איכות היין
+    )y detciderp(
+    \selectlanguage{hebrew}
+    אל מול הערך האמיתי של איכות היין
+    )y eurt(.
+    \newline
+    בוצע מבחן
+    t-test
+    \selectlanguage{hebrew}
+    לבלתי תלויים על סמך ריבוע השגיאות של ערך החיזוי של כל דגימה אל מול הערך האמיתי של איכות היין
+        )y eurt - y detciderp(
+    \selectlanguage{hebrew}
+    .ערך ה-eulav p של מבחן זה יצא
+    50-e7412714121227603.1
+     כשממוצע ריבועי השגיאות של הרגרסיה הליניארית יצא 3629227177420965.0 ושל המודל tserof modnar יצא 804020155773283.0 ולכן מבין שתי השיטות הללו מודל הרגרסיה הטוב יותר הוא מודל ה-tserof modnar בו סך ממוצעי ריבועי השגיאות קטן באופן מובהק מזה של מודל הרגרסיה הליניארית.
+     \item בחלק זה הדרישה היתה לבצע אשכול של הנתונים על סמך שני מודלים שונים. המודל הראשון שנבחר הוא snaem-k והמודל השני הוא MMG)ledom erutxim naissuag(.בחלק זה טיב האשכול הוערך על ידי etteuohlis erocs.ההרצה של כל אחת משיטות ה-gniretsulc הנ"ל בוצעה  03 פעמים ולכל אחת חולץ מדד זה. הממוצע naem-k היה 19338725104487111.0 וממוצע MMG היה 2263843220215256100.0. כבר מהשוואה זו ניתן לראות כי ששיטת naem-k עדיפה לחלוקה לאשכולות מאחר והיא בעלת הערך הגבוה יותר והקרובה ל-1 )הערך הגבוה ביותר למדד(. מעבר לכך בוצע מבחן tset-t גם כאן וערך ה-eulav-p יצא 65-e946399652436062.1, גם כאן ההבדלים יצאו מובהקים.
+     \selectlanguage{english}
+     \centering
+    \includegraphics[width=0.5\paperwidth]{gmm}
+    \includegraphics[width=0.5\paperwidth]{k_means}
+    \newline
+    \selectlanguage{hebrew}
+    הגרף העליון מראה את שיטת החלוקה לאשכולות על סמך MMG והגרף התחתון לפי שיטת snaem-k. הגרפים מציגים את החלוקה לאשכולות על סמך הפיצ'ר הראשון כאשר ציר ה-y מסמן את האשכול של כל דגימה ונע בטווח 0-01.
+    \item בחלק זה הדרישה היתה ליישם שתי שיטות להורדת מימדים. השיטה הראשונה שנבחרה היא שיטת ELL)gniddebme raenil yllacol(, והשיטה השניה היא ACP )sisylana tnenopmoc lapicnirp(. המדד להשוואה בין השיטות הוא noitcurtsnocer rorre muminim. מדד זה ב-ELL הוא 91-e526091806608902.9 וב-ACP הוא 55650027943536564.0 ולכן מבין שניהם ההטלה של ELLהיא קורלטיבית יותר לאיכות היין.המשמעות היא שהורדת המימדים שמרה על עיקר המידע  ונוכל להסתמך על המודל בכדי לחזות בהצלחה גבוהה יותר על סמך ELL.
+    \selectlanguage{english}
+     \centering
+    \includegraphics[width=0.5\paperwidth]{pca}
+    \includegraphics[width=0.5\paperwidth]{lle}
+    \newline
+    \selectlanguage{hebrew}
+    שני הגרפים הנ"ל מראים את האשכולות לפי שיטת ACP ושיטת ELL.
+\end{enumerate}
+
+\end{document}
